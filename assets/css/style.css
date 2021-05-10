@@ -112,7 +112,7 @@ div#nav {
   align-items: center;
   border: 2px solid var(--text-color);
   border-radius: 0 0 10px 10px;
-  padding: .5rem .5rem;
+  padding: .75rem .5rem;
   width: 100%;
   max-width: 810px;
   background-color: var(--nav-bg);
