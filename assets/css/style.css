@@ -2,10 +2,13 @@
 
 :root {
   --body-bg: #2f3247;
+  --nav-bg: #434765;
   --text-color: #95a0f3;
   --text-color-dark: #6373ee;
   --link-color: #acb2dc;
+  --link-color-dark: #858dcc;
   --link-color-hover: #d4d7ed;
+  --link-color-hover-dark: #acb2dc;
   --heading-color: #c8cef9;
   --heading-color-hover: #e1e7f9;
 }
@@ -26,6 +29,10 @@ body {
   font-size: 1rem;
   background-color: var(--body-bg);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .75rem .5rem;
 }
 
 p {
@@ -55,11 +62,42 @@ a:hover::after {
   transform: scale(1);
 }
 
+a.no-border::after {
+  border: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: .25rem 0;
   color: var(--heading-color);
   --link-color: var(--heading-color);
   --link-color-hover: var(--heading-color-hover);
+}
+
+
+ul {
+  list-style: none;
+}
+
+ul.inline {
+  display: flex;
+  flex-direction: row;
+}
+
+ul.inline > li {
+  padding: 0 .5rem;
+}
+
+ul.dash > li::before {
+  content: "– "
+}
+
+ul.inline.dash > li {
+  padding-right: 0;
+  padding-left: .25rem;
+}
+
+ul.inline.dash > li:first-child::before {
+  content: "";
 }
 
 div#nav {
@@ -72,12 +110,49 @@ div#nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border: 2px solid var(--text-color);
+  border-radius: 0 0 10px 10px;
+  padding: .5rem .5rem;
+  width: 100%;
+  max-width: 810px;
+  background-color: var(--nav-bg);
+  transition: border-radius .25s ease;
+}
+
+@media screen and (max-width: 810px) {
+  div#nav {
+    border-radius: 0;
+  }
+}
+
+div#nav > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+div#nav > ul > li {
+  padding: 0 .5rem;
 }
 
 div#content {
   padding-top: 3rem;
+  max-width: 1024px;
+  width: 100%;
 }
 
 div#footer {
   color: var(--text-color-dark);
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1024px;
+  --link-color: var(--link-color-dark);
+  --link-color-hover: var(--link-color-hover-dark);
+  box-shadow: 0 -1px 10px var(--text-color);
+  padding: .5rem .75rem;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: -.75rem;
 }
