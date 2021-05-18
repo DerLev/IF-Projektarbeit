@@ -169,8 +169,16 @@ div#footer {
   max-width: 1024px;
   --link-color: var(--link-color-dark);
   --link-color-hover: var(--link-color-hover-dark);
-  box-shadow: 0 -1px 10px var(--text-color);
+  box-shadow: 0 -1px 10px #95a0f355;
   padding: .5rem .75rem;
   border-radius: 10px 10px 0 0;
   margin-bottom: -.75rem;
+}
+
+div.page {
+  display: block;
+}
+
+div.page.hidden {
+  display: none;
 }
