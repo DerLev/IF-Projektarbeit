@@ -220,6 +220,7 @@ div#nav {
   max-width: 810px;
   background-color: var(--nav-bg);
   transition: border-radius .25s ease;
+  z-index: 10;
 }
 
 /* DESKTOP VERSION */
