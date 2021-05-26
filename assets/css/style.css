@@ -392,3 +392,62 @@ th, td {
 .ml-1 {
   margin-left: 1rem;
 }
+
+/* SITEMAPITEM */
+div.sitemap-item {
+  border: 1px solid var(--text-color-dark);
+  display: flex;
+  flex-direction: column;
+  margin: 1.25rem 0;
+  border-radius: 4px;
+}
+
+/* KOPFZEILE VON SITEMAPITEM */
+div.sitemap-item > div.si-header {
+  border-bottom: 1px solid var(--text-color-dark);
+  padding: .75rem .5rem;
+  display: flex;
+  gap: .25rem;
+}
+
+/* KREISE VON SITEMAPITEM */
+div.sitemap-item > div.si-header > div.si-circle {
+  width: .75rem;
+  height: .75rem;
+  border: 1px solid var(--text-color-dark);
+  border-radius: 9999px;
+  background-color: transparent;
+  transition: background-color .25s ease;
+  cursor: pointer;
+}
+
+/* HOVER VON KREISEN */
+div.sitemap-item > div.si-header > div.si-circle:hover {
+  background-color: var(--text-color-dark);
+}
+
+/* SITEMAPITEM CONTENT */
+div.sitemap-item > div.si-content {
+  padding: .5rem 1rem;
+}
+
+/* LINKS IM SITEMAPITEM */
+div.sitemap-item > div.si-content ul > li > a {
+  background-color: var(--text-color-dark);
+  color: #ffffff;
+  display: block;
+  padding: .25rem .5rem;
+  border-radius: 4px;
+  transition: background-color .25s ease;
+  margin: .5rem 0;
+}
+
+/* HOVER VON LINKS */
+div.sitemap-item > div.si-content ul > li > a:hover {
+  background-color: var(--text-color);
+}
+
+/* KEINE BORDER VON LINKS */
+div.sitemap-item > div.si-content ul > li > a::after {
+  border: none;
+}
